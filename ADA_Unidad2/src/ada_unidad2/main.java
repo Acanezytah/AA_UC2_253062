@@ -4,7 +4,7 @@
  */
 package ada_unidad2;
 import static ada_unidad2.Ordenamientos.burbuja;
-
+import static ada_unidad2.Ordenamientos.seleccion;
 /**
  *
  * @author Akane
@@ -13,13 +13,20 @@ public class main {
     public static void main(String[] args) {
         
         int[] numeros = {5, 3, 8, 4, 2}; // 1 
+       
+        /*METODO BURBUJA */
         burbuja(numeros); // 
 
-        // Imprimir el arreglo ordenado
         for (int num : numeros) {
             System.out.print(num + " "); // 1 
         }
-        //Lineal
+                     
+        /*METODO POR SELECCION*/    
+        seleccion(numeros);  
+        
+        for (int num : numeros) {  
+            System.out.print(num + " ");         
     }
     
+}
 }

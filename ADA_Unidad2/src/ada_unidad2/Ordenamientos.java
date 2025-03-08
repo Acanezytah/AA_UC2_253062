@@ -13,7 +13,7 @@ public class Ordenamientos {
 /**
  * Método para realizar el ordenamiento burbuja
  * @param arr - El Arreglo
- * return: La lista ordenada
+ * Complejidad: O(n a la 2)
  */ 
      public static void burbuja(int[] arr) {
         int n = arr.length; // 1 
@@ -25,9 +25,34 @@ public class Ordenamientos {
                     int temp = arr[j];   // 1 
                     arr[j] = arr[j + 1]; // 1 
                     arr[j + 1] = temp;   // 1 
-                }
-                //O(n a la 2)
+               }              
             }
+        }
+    }
+     
+    /*-----------------------------------------------------*/
+     
+    /**
+     * Metodo para realizar el ordenamiento por selección
+     * @param arr 
+     * Complejidad: O(n a la 2)
+     */
+    public static void seleccion(int[] arr) {
+        int n = arr.length;  // 1 
+
+        for (int i = 0; i < n - 1; i++) {  // n-1
+            int minIndex = i;  // 1 
+
+            for (int j = i + 1; j < n; j++) {  // n-i-1
+                if (arr[j] < arr[minIndex]) {  // n
+                    minIndex = j;  // 1 
+                }
+            }
+
+            // Intercambio
+            int temp = arr[i];  // 1 
+            arr[i] = arr[minIndex];  // 1 
+            arr[minIndex] = temp;  // 1 
         }
     }
 }
