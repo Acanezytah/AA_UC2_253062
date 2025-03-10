@@ -12,19 +12,20 @@ import static ada_unidad2.Ordenamientos.seleccion;
 public class main {
     public static void main(String[] args) {
         
-        int[] numeros = {5, 3, 8, 4, 2}; // 1 
+        int[] listaBurbuja = {5, 3, 8, 4, 2}; // 1 
        
         /*METODO BURBUJA */
-        burbuja(numeros); // 
+        burbuja(listaBurbuja); // 
 
-        for (int num : numeros) {
+        for (int num : listaBurbuja) {
             System.out.print(num + " "); // 1 
         }
                      
-        /*METODO POR SELECCION*/    
-        seleccion(numeros);  
+        /*METODO POR SELECCION*/ 
+        int[] listaSeleccion = {5, 3, 8, 4, 2};
+        seleccion(listaSeleccion);  
         
-        for (int num : numeros) {  
+        for (int num : listaSeleccion) {  
             System.out.print(num + " ");         
     }
     
