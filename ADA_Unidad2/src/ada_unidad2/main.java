@@ -4,6 +4,7 @@
  */
 package ada_unidad2;
 import static ada_unidad2.Ordenamientos.burbuja;
+import static ada_unidad2.Ordenamientos.insercion;
 import static ada_unidad2.Ordenamientos.seleccion;
 /**
  *
@@ -28,6 +29,14 @@ public class main {
         for (int num : listaSeleccion) {  
             System.out.print(num + " ");         
     }
+        
+        /*METODO POR INSERCION*/
+        int[] listaInsercion = {5, 3, 8, 6, 2, 7, 4, 1};
+        insercion(listaInsercion);
+        
+        for (int num : listaInsercion) {
+            System.out.print(num + " ");
     
+        }
 }
 }

@@ -55,4 +55,29 @@ public class Ordenamientos {
             arr[minIndex] = temp;  // 1 
         }
     }
-}
+    
+     /*-----------------------------------------------------*/
+    
+    /**
+     * Metodo para realizar el metodo por inserción
+     * @param arr 
+     * Complejidad: O(n a la 2)
+     */
+    public static void insercion(int[] arr) {
+        int n = arr.length;
+        for (int i = 1; i < n; i++) {  
+            int key = arr[i];  
+            int j = i - 1;  
+
+            while (j >= 0 && arr[j] > key) {  
+                arr[j + 1] = arr[j];  
+                j--;  
+            }
+            arr[j + 1] = key;  
+        }
+    }
+
+
+    }
+
+
