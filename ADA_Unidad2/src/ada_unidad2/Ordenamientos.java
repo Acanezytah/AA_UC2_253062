@@ -76,6 +76,50 @@ public class Ordenamientos {
             arr[j + 1] = key;  
         }
     }
+    
+    /*-----------------------------------------------------*/
+    
+    /**
+     * Metodo para realizar el metodo quickSort de ordenamiento
+     * @param arr , inicio y fin
+     * Complejidad: O(n a la 2)
+     */
+    static void quickSort(int arr[], int inicio, int fin) {
+        if (inicio < fin) {
+            int pivote = particion(arr, inicio, fin); 
+
+            // Ordena recursivamente los elementos antes y después del pivote
+            quickSort(arr, inicio, pivote - 1);
+            quickSort(arr, pivote + 1, fin);
+        }
+    }
+
+    /**
+     * Metodo para realizar la particion del metodo quicksort
+     * @param arr , inicio y fin
+     * Complejidad: O(n a la 2)
+     */
+    static int particion(int arr[], int inicio, int fin) {
+        int pivote = arr[fin]; 
+        int i = inicio - 1; 
+
+        for (int j = inicio; j < fin; j++) {
+            if (arr[j] < pivote) { 
+                i++;
+                // Intercambiar arr[i] y arr[j]
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+
+        // Intercambiar 
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[fin];
+        arr[fin] = temp;
+
+        return i + 1; 
+    }
 
 
     }
