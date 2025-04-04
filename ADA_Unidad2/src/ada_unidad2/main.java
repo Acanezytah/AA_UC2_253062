@@ -5,6 +5,7 @@
 package ada_unidad2;
 import static ada_unidad2.Ordenamientos.burbuja;
 import static ada_unidad2.Ordenamientos.insercion;
+import static ada_unidad2.Ordenamientos.mergeSort;
 import static ada_unidad2.Ordenamientos.quickSort;
 import static ada_unidad2.Ordenamientos.seleccion;
 /**
@@ -52,6 +53,18 @@ public class main {
         for (int num : listaQuickSort) {
             System.out.print(num + " ");
         }
-        System.out.println();  
+        System.out.println(); 
+        
+        /* METODO MERGE SORT */
+        int[] listaMergeSort = {5, 3, 8, 4, 2};
+        int a = listaMergeSort.length;
+
+        mergeSort(listaMergeSort, 0, a - 1);
+
+        // Imprimir arreglo ordenado
+        for (int num : listaMergeSort) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
 }
 }

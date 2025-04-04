@@ -120,6 +120,67 @@ public class Ordenamientos {
 
         return i + 1; 
     }
+    
+    /**
+    * Metodo para realizar la mezcla en Merge Sort
+    * @param arr, inicio, medio y fin
+    * Complejidad: O(n)
+    */
+   static void mezclar(int arr[], int inicio, int medio, int fin) {
+       int n1 = medio - inicio + 1;
+       int n2 = fin - medio;
+
+       int izquierda[] = new int[n1];
+       int derecha[] = new int[n2];
+
+       for (int i = 0; i < n1; i++) {
+           izquierda[i] = arr[inicio + i];
+       }
+       for (int j = 0; j < n2; j++) {
+           derecha[j] = arr[medio + 1 + j];
+       }
+
+       int i = 0, j = 0, k = inicio;
+       while (i < n1 && j < n2) {
+           if (izquierda[i] <= derecha[j]) {
+               arr[k] = izquierda[i];
+               i++;
+           } else {
+               arr[k] = derecha[j];
+               j++;
+           }
+           k++;
+       }
+
+       while (i < n1) {
+           arr[k] = izquierda[i];
+           i++;
+           k++;
+       }
+
+       while (j < n2) {
+           arr[k] = derecha[j];
+           j++;
+           k++;
+       }
+   }
+
+   /**
+    * Metodo recursivo de Merge Sort
+    * @param arr, inicio y fin
+    * Complejidad: O(n log n)
+    */
+   static void mergeSort(int arr[], int inicio, int fin) {
+       if (inicio < fin) {
+           int medio = inicio + (fin - inicio) / 2;
+
+           mergeSort(arr, inicio, medio);
+           mergeSort(arr, medio + 1, fin);
+
+           mezclar(arr, inicio, medio, fin);
+       }
+   }
+
 
 
     }
