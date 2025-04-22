@@ -28,7 +28,7 @@ public class Main {
         arbol.raiz = arbol.eliminar(arbol.raiz, 50);
 
         // Recorrido inorden después de eliminar
-        System.out.print("Inorden después de eliminar 50: ");
+        System.out.print("Inorden despues de eliminar 50: ");
         arbol.inorden(arbol.raiz);
         System.out.println();
 
@@ -36,7 +36,7 @@ public class Main {
         int[] buscarValores = {30, 50, 60};
         for (int valor : buscarValores) {
             boolean encontrado = arbol.buscar(arbol.raiz, valor);
-            System.out.println("¿" + valor + " encontrado? " + (encontrado ? "Sí" : "No"));
+            System.out.println(valor + " encontrado? " + (encontrado ? "Si" : "No"));
         }
     }
 }
